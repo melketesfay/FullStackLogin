@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: php-intro-opportunity
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./www:/var/www
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: php-intro-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./www:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d
+
+  mysql_db:
+    image: mysql:latest # image version of mysql
+    container_name: php-mysql-login_db
+    volumes:
+      - ./data_db:/var/lib/mysql # Where the data will be stored
+    environment:
+      MYSQL_ROOT_PASSWORD: admin_digital2023 # root password
+      MYSQL_DATABASE: php_mysql_login_db # the database name (will be used to receive the wordpress tables, see below)
+      MYSQL_USER: opportunity # the username for mysql as defined by you (also used in phpMyAdmin)
+      MYSQL_PASSWORD: Opport2023 # the password for mysql db as defined by you (also used in phpMyAdmin)

@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -13,25 +13,25 @@ body{
 
 
 
-nav{
+nav {
     max-width: 600px;
     display: flex;
-   margin: auto;
+    margin: auto;
     justify-content: center;
 }
 
-nav > ul{
+nav>ul {
     display: flex;
     gap: 2rem;
-    
+
 }
 
-nav ul li{
+nav ul li {
     text-decoration: none;
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
@@ -43,39 +43,39 @@ nav ul li a{
 
 /* index.php sytle */
 
-.index-form-wraper{
+.index-form-wraper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80vh;
-   
+
 }
 
 
 
-.index-form{
+.index-form {
     justify-self: center;
     display: flex;
     flex-direction: column;
-    
+
     gap: 5px;
-   
+
     font-size: 1.5rem;
     padding: 40px;
     border: 2px solid gray;
     border-radius: 20px;
 }
 
-.index-form input:not(input[type=submit]){
-background-color: rgb(193, 190, 190);
-min-width: 600px;
-height: 40px;
-border: 1px solid black;
-border-radius: 10px;
+.index-form input:not(input[type=submit]) {
+    background-color: rgb(193, 190, 190);
+    min-width: 600px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-#submit{
+#submit {
     max-width: fit-content;
     align-self: center;
     margin-top: 50px;
@@ -85,29 +85,29 @@ border-radius: 10px;
     padding: 5px 10px;
     border-radius: calc(1.5rem/2);
 
-    
+
 }
 
 
 
 
-.signup{
+.signup {
     justify-self: center;
     display: flex;
     flex-direction: column;
-    
+
     gap: 0px;
 
     font-size: 1.5rem;
     padding: 40px;
-  
-   
+
+
 }
 
-.signup_submit{
+.signup_submit {
     max-width: fit-content;
     align-self: center;
-   
+
     font-size: 1.5rem;
     font-weight: 500;
     background-color: rgb(13, 212, 13);
@@ -118,20 +118,29 @@ border-radius: 10px;
     color: black;
 }
 
-.signup_text{
+.signup_text {
     color: red;
 }
 
-h2{
+h2 {
     color: red;
 }
 
 
 /* dashboard.php style */
 
-.welcome-txt{
+.welcome-txt {
 
     font-size: 4rem;
     font-weight: 900;
+    color: green;
+}
+
+
+
+/* wrong input data alerts */
+
+
+.wrong_input_data_alert {
     color: green;
 }

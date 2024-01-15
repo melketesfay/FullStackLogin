@@ -30,3 +30,15 @@ services:
       MYSQL_DATABASE: php_mysql_login_db # the database name (will be used to receive the wordpress tables, see below)
       MYSQL_USER: opportunity # the username for mysql as defined by you (also used in phpMyAdmin)
       MYSQL_PASSWORD: Opport2023 # the password for mysql db as defined by you (also used in phpMyAdmin)
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest # image version phpMyAdmin
+    container_name: login-phpMyAdmin
+    links:
+      - mysql_db # link to mysql
+    environment:
+      VIRTUAL_HOST: projectwp.real
+      PMA_HOST: mysql_db
+      PMA_PORT: 3306
+    ports:
+      - "9000:80" # the port to access phpMyAdmin -> localhost:9000 (the last port :80 is the container port. you can leave it as is)

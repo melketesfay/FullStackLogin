@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
 
-        $_SESSION["message"] = "<p style='color:red;'>wrong input data</p>";
+        $_SESSION["message"] = "<p class='wrong_input_data_alert'>wrong input data</p>";
         echo "no empty fields allowed";
         header("Location: /index.php");
     }
